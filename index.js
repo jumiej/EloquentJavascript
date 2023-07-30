@@ -6,6 +6,22 @@
  const strManiputation3 = `Hello, backslash,
 I'm just checking some breaking changes`
 
+const getProfile= () =>{
+ const profile = {
+    name:"jumie",
+    age : 20,
+    status :"complicated",
+     location: "Enugu"
+  }
+
+  return profile
+}
+
+const myProfile = getProfile();
+console.log(getProfile())
+
+
+console.log (myProfile)
 // Define a function that will return tab a string///
 var TAB = "\n";
 
@@ -22,6 +38,13 @@ const myName5 = new String (myName4);
 const myGender = "I'm a female"
 const gender = new String (myGender);
 
+const declare =() =>{
+    const myDeclaration = "This is a string object";
+    return myDeclaration
+}
+
+const Declare = declare()
+
 ////////////////OR////////////
 
 const girl = new String ("I'm a girl")
@@ -29,6 +52,14 @@ const girl = new String ("I'm a girl")
 /////////////////Conversions of numeric types//////////// 
 const Number = "2 + 2";    //primitive
 const objString = new String ("2 + 2")  //string object
+
+
+const add = (a, b) =>{
+    return (a + b);
+}
+
+ const result = add (3,5)
+console.log( "Result", result)
 
 ////////////////////////// Strings and it's Properties///////////////////
 //  charAt()
@@ -47,8 +78,14 @@ const objString = new String ("2 + 2")  //string object
 const Event = "Holiday is coming soon"
 
 ///toUpperCase() OR toLowerCase///
-const summer = "summer is here"
+// const summer = "summer is here"
 
+const FlexPeriod =()=>{
+    const summer = "summer is here";
+    return summer.toLocaleUpperCase()
+}
+
+const summerDays = FlexPeriod()
 ///	split///
 const check = "The kitchen pipe is faulty";
 
@@ -56,17 +93,42 @@ const check = "The kitchen pipe is faulty";
 const adage1 = "hard work doesn't kill"
 const adage2 ="but laziness do."
 
+const wiseMan = () =>{
+    const adage1 = "hard work doesn't kill" 
+    const adage2 ="but laziness do."
+    // const adage3 = adage1 + adage2 
+    return( adage1 + ' ' + adage2 )
+}
+
+console.log( "aaaaaaaa", wiseMan())
+
+const dadsAdage = wiseMan()
+console.log( "BabaMi's adage is", dadsAdage)
 
 ///replace///
-const vividImagination = "I would like to take myself on a treat"
-const secondImagination = vividImagination.replace("treat", "holiday")
+// const vividImagination = "I would like to take myself on a treat"
+// const secondImagination = vividImagination.replace("treat", "holiday")
+ 
+const vividImagination = () => {    
+    const Imagination = "I would like to take myself on a treat"
+    return Imagination.replace("treat", "holiday")
+}
+const myReality = vividImagination()
+
+console.log(myReality)
 
 
 ///indexOf///
-const programming = "I would like to learn something about programming languages"
+// const programming = "I would like to learn something about programming languages"
+const learn =  () =>{
+    const programming = "I would like to learn something about programming languages"
+    return programming.indexOf(2)
+}
+const myWishes = learn()
+console.log(myWishes)
 
 ///match///
-const like = "I would like to javaScript not java"
+const like = "I would like to  learn javaScript not java"
 const res = like.match(/java/g)
 const response = like.match(/java/)
 
@@ -74,8 +136,17 @@ const response = like.match(/java/)
 const stage = "I'm a child"
 
 ///toString///
-const confession = "i am going through a lot in my head"
-const truth = new String(confession)
+// const truth = new String(confession)
+
+const saySomething = () => {
+    const confession = "i am going through a lot in my head"
+    return confession
+}
+const alot = saySomething()
+
+console.log("substrings of my confession", alot.substring(0, 9))
+console.log("substrings of my confession" ,alot.substring(9, 0))
+console.log("substrings of my confession",  alot.substring(0, 15))
 
 ///subString///
 const hero = "champions don't loose"
@@ -83,13 +154,22 @@ const hero = "champions don't loose"
 // check spam //
 
 function checkSpam(str) {
-    let check = str.toLowerCase();
+    // let check = str.toLowerCase();
+    let checkViagra = "is viagra here ?"
+    let xxx = "Are there xxx here?"
+    let innocentRabbit = "We are here?"
 
-    return check.includes("viagra") || check.includes("xxx")
-
+    return  (checkViagra.includes("viagra") || xxx.includes("xxx"))
 }
 
 
+console.log( checkSpam("buy ViAgRA now"))
+console.log( checkSpam("free xxxxxx"))
+console.log( checkSpam("innocent rabbit"))
+
+
+console.log(summerDays)
+console.log(Declare)
 console.log(strManiputation)
 console.log(strManiputation2)
 console.log(strManiputation3)
@@ -114,26 +194,21 @@ console.log(`The character in index 0 is  '${Event.charAt(13)}'`)
 console.log(`The character in index 0 is  '${Event.charAt(14)}'`)
 console.log(`The character in index 0 is  '${Event.charAt(15)}'`)
 console.log(`The character in index 0 is  '${Event.charAt(16)}'`)
-console.log(summer.toUpperCase())
-console.log(summer.toLowerCase())
+// console.log(summer.toUpperCase())
+// console.log(summer.toLowerCase())
 console.log(check.split(' '))
 console.log(check.split(''))
 console.log(check.split(' ' ,3))
 console.log(adage1.concat(' ',adage2))
-console.log(secondImagination)
-console.log(programming.indexOf(2))
-console.log (res) 
-console.log(response)
+// console.log(secondImagination)
+// console.log(programming.indexOf(2))
+console.log ("here is res", res) 
+console.log("here is response", response)
 console.log(stage.slice(6, 11))
 console.log(stage.slice(4, 11))
-console.log(confession.toString())
-console.log(truth.toString())
-console.log(hero.substring(0, 9))
-console.log(hero.substring(9, 0))
-console.log(hero.substring(0, 15))
-console.log( "Is viagra  here ?", checkSpam("buy ViAgRA now"))
-console.log("Is there xxxx in here ?", checkSpam("free xxxxxx"))
-console.log("Do we have innocent rabbit here?", checkSpam("innocent rabbit"))
+// console.log(confession.toString())
+// console.log(truth.toString())
+
 
 
 ///////////////////Numbers//////////////////
@@ -173,9 +248,6 @@ const  s = 6789
 const myDate = new Date
  let myCurrentDate = myDate.toLocaleString()
 
-
-
-
  let p = new String (30000);
  const myCurr = {
     style:"currency",
@@ -191,6 +263,34 @@ let c = parseInt("2002@jumie.com")  //it returned integer until it encountered n
 let d = parseInt("jumie2002@.com")  //it returned NaN 
 let e = parseInt("20 7 05 10") // it returned the first integer value it encountered
 
+    const aper = ()=> {
+        return parseInt("3.147")
+    }
+
+    console.log("aper" , aper()) //
+
+    const bper = ()=> {
+        return parseInt("100")
+    }
+    console.log("bper" , bper()) //
+
+    const cper = ()=> {
+        return parseInt("2002@jumie.com")
+    }
+
+    console.log("cper" , cper()) //
+
+    const dper = ()=> {
+        return parseInt("jumie2002@.com")
+    }
+
+    console.log("dper" , dper()) //
+
+    const eper = ()=> {
+        return parseInt("20 7 05 10")
+    }
+
+    console.log("eper" , eper())
 ///with both String and radix///
 let f = parseInt("100", 10) // returns 10
 let g = parseInt("8", 8) // returns NaN because is not up to hexadecimal
@@ -199,6 +299,30 @@ let i = parseInt("16",16)
 let j = parseInt(" 100 ")
 let l = parseInt("0 * 16")
 
+const parse = (a,b) => {
+    return parse
+}
+ let parseIn = parse(parseInt("100", 10))
+ 
+ console.log("parseInF",parseIn())
+
+ const parseG = ()=> {
+    return parseG(parseInt("8", 8))
+ }
+//   let parseGG = parseG(parseInt()/)
+ console.log("parseGG",parseG())
+
+ const parseH = () => {
+    return(parseInt("15", 8))
+ }
+console.log("parseH",parseH())
+
+const parseI = ()=> {
+    return parseInt("20 7 05 10")
+}
+
+console.log("parseI" , parseI())
+ 
 ///parseFloat(string)
 let floatA = parseFloat(3.142)
 let floatB = parseFloat("3.142")
@@ -292,11 +416,11 @@ let testH = isNaN(NaN)
 // console.log('using parseInt("2002@jumie.com") = ' + c)
 // console.log('using parseInt("jumie2002@.com") = ' + d)
 // console.log('using parseInt("20 7 05 10") = ' + e)
-// console.log('using parseInt("100" 10) = ' + f)
-// console.log('using parseInt("8" 8) = ' + g)
-// console.log('using parseInt("15", 8) = ' + h)
-// console.log('using parseInt("16" 16) = ' + i)
-// console.log('using parseInt(" 100 ") = ' + j)
+console.log('using parseInt("100" 10) = ' + f)
+console.log('using parseInt("8" 8) = ' + g)
+console.log('using parseInt("15", 8) = ' + h)
+console.log('using parseInt("16" 16) = ' + i)
+console.log('using parseInt(" 100 ") = ' + j)
 // console.log('using parseInt( " 0 x 16") = ' + l)
 // console.log("using parseFloat(3.142) = " + floatA)
 // console.log("using parseFloat('3.142') = " + floatB)
@@ -339,53 +463,96 @@ let testH = isNaN(NaN)
 let YES = true
 let NO = false
 
+const checkOfficeHour = () => {
+    let hour = 9;
+    if(false)  {
+        return `it is office hour which ${hour}`
+
+    } else {
+        return "We are close for the day"
+    }
+}
+
 ///boolean used in conditional statements///
-let temperature = 30
-if ( temperature < 32){
-    console.log("its cold out there")
-}
+// const checkTemperature = () => {
+//     let temperature = 30  
+//     let yourAge = 15
+// if ( temperature < 32){
+//     return("its cold out there");
+//     }elseif(temperature > 20); {
+//         return "put on snowJacket";
+//     }elseif ( yourAge >= 0);{
+//     return("congrats! you were born");
+// }elseif ( yourAge = 0);{
+//     return("you're  just a baby")
+// }elseif ( yourAge <= 3);{
+//     return("you can not even speak yet! How can you code?")
+// }elseif ( yourAge = 5);{
+//     return("Get ready for your first ever day of school")
+// }elseif ( yourAge  <= 16);{
+//     return("You can drive! Maybe! Check your state law")
+// }elseif ( yourAge  <= 18 );{
+//     return("You are now legal, you have the right to vote ")
+// }elseif ( yourAge <= 21);{
+//     return("you are eligible for public office")
+// }elseif ( yourAge <= 35);{
+//     return("You can run for president now")
+// }elseif ( yourAge <= 65);{
+//     return("You can retire")
+// }
+    
+// }
 
-let tempStatues = temperature < 32
-if ( tempStatues){
-    console.log("put on snowJacket")
-}
 
-let yourAge = 15
-if ( yourAge >= 0){
-    console.log("congrats! you were born")
-}
+// console.log(" cccccccccccccc",checkTemperature())
+// console.log("ddddddd", yourAge)
 
-if ( yourAge = 0){
-    console.log("you're  just a baby")
-}
+// let temperature = 30
+// if ( temperature < 32){
+//     console.log("its cold out there")
+// }
 
-if ( yourAge <= 3){
-    console.log("you can not even speak yet! How can you code?")
-}
+// let tempStatues = temperature < 32
+// if ( tempStatues){
+//     console.log("put on snowJacket")
+// }
 
-if ( yourAge = 5){
-    console.log("Get ready for your first ever day of school")
-}
+// let yourAge = 15
+// if ( yourAge >= 0){
+//     console.log("congrats! you were born")
+// }
 
-if ( yourAge  <= 16){
-    console.log("You can drive! Maybe! Check your state law")
-}
+// if ( yourAge = 0){
+//     console.log("you're  just a baby")
+// }
 
-if ( yourAge  <= 18 ){
-    console.log("You are now legal, you have the right to vote ")
-}
+// if ( yourAge <= 3){
+//     console.log("you can not even speak yet! How can you code?")
+// }
 
-if ( yourAge <= 21){
-    console.log("you are eligible for public office")
-}
+// if ( yourAge = 5){
+//     console.log("Get ready for your first ever day of school")
+// }
 
-if ( yourAge <= 35){
-    console.log("You can run for president now")
-}
+// if ( yourAge  <= 16){
+//     console.log("You can drive! Maybe! Check your state law")
+// }
 
-if ( yourAge <= 65){
-    console.log("You can retire")
-}
+// if ( yourAge  <= 18 ){
+//     console.log("You are now legal, you have the right to vote ")
+// }
+
+// if ( yourAge <= 21){
+//     console.log("you are eligible for public office")
+// }
+
+// if ( yourAge <= 35){
+//     console.log("You can run for president now")
+// }
+
+// if ( yourAge <= 65){
+//     console.log("You can retire")
+// }
 
 
 ///boolean Expressions///
@@ -394,17 +561,19 @@ let v = 10
 let sum1 = w * 2
 let sum2 = v * 2 
 
-result = w == v
-result2 = w > v 
-result3 = w < v
-result4 = sum2 > sum1
-result5 = sum1 > sum2
+// const happy = true
+
+examine = w == v
+// examine = w > v 
+// examine = w < v
+// examine = sum2 > sum1
+// examine = sum1 > sum2
 
 
 ///boolean Function true//
 /// They convert the first parameter to a boolean and then return true for any non-empty, non-zero, object, or array.///
 let b2 = Boolean('Hello, world')
-let b3 = Boolean('W') 
+// let b3 = Boolean('W') 
 let b4 = Boolean({}) 
 let b5 = Boolean([])
 
@@ -436,18 +605,18 @@ let huge = 12345n
 let huge2 = 12345n
 let huge3 =  huge + huge2
 
-
+// console.log(examine)
 console.log(YES) 
 console.log(NO)
 console.log( "it is " + ' ' + YES + ' ' + " because its YES") 
 console.log( "While it is " + ' ' + NO  + ' ' + " because its NO") 
-console.log("w == v is " + result)
-console.log( "w > v is " + result2)
-console.log("w < v is " + result3)
-console.log("sum2 > sum1 is " + result4 )
-console.log("sum1 > sum2 is " +  result5)
+console.log("w == v is " + examine)
+// console.log( "w > v is " + result2)
+// console.log("w < v is " + result3)
+// console.log("sum2 > sum1 is " + result4 )
+// console.log("sum1 > sum2 is " +  result5)
 console.log( "boolean be2 is " + ' ' + b2)
-console.log("boolean be3 is " + ' ' + b3)
+// console.log("boolean be3 is " + ' ' + b3)
 console.log("boolean be4 is " + ' ' + b4)
 console.log("boolean be5 is " + ' ' + b5)
 console.log("boolean be6 is " + ' ' + b6)
