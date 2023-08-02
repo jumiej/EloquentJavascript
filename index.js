@@ -256,85 +256,72 @@ const myDate = new Date
  const myMoney = p.toLocaleString("en-GB" , myCurr)
 
 ///parseInt(string,[radix])///
-///with only String///
-let a = parseInt("3.147") //returns integer value of a floating number
-let b = parseInt("100")
-let c = parseInt("2002@jumie.com")  //it returned integer until it encountered not a number character
-let d = parseInt("jumie2002@.com")  //it returned NaN 
-let e = parseInt("20 7 05 10") // it returned the first integer value it encountered
+// ///with only String///
+// let a = parseInt("3.147") //returns integer value of a floating number
+// let b = parseInt("100")
+// let c = parseInt("2002@jumie.com")  //it returned integer until it encountered not a number character
+// let d = parseInt("jumie2002@.com")  //it returned NaN 
+// let e = parseInt("20 7 05 10") // it returned the first integer value it encountered
 
-    const aper = ()=> {
-        return parseInt("3.147")
+    const handleParseInt = (str)=> {
+        return handleParseInt(str)
     }
 
-    console.log("aper" , aper()) //
+    handleParseInt('3.12')
+    // handleParseInt('100')
+    // handleParseInt('2002@jumie.com')
+    // handleParseInt("jumie2002@.com")
+    // handleParseInt("20 7 05 10")
 
-    const bper = ()=> {
-        return parseInt("100")
-    }
-    console.log("bper" , bper()) //
+    console.log("I am handling parseInt here ", handleParseInt)
 
-    const cper = ()=> {
-        return parseInt("2002@jumie.com")
-    }
 
-    console.log("cper" , cper()) //
 
-    const dper = ()=> {
-        return parseInt("jumie2002@.com")
-    }
 
-    console.log("dper" , dper()) //
-
-    const eper = ()=> {
-        return parseInt("20 7 05 10")
-    }
-
-    console.log("eper" , eper())
 ///with both String and radix///
-let f = parseInt("100", 10) // returns 10
-let g = parseInt("8", 8) // returns NaN because is not up to hexadecimal
-let h = parseInt("15", 8) // returns 
-let i = parseInt("16",16)
-let j = parseInt(" 100 ")
-let l = parseInt("0 * 16")
+// let f = parseInt("100", 10) // returns 10
+// let g = parseInt("8", 8) // returns NaN because is not up to hexadecimal
+// let h = parseInt("15", 8) // returns 
+// let i = parseInt("16",16)
+// let j = parseInt(" 100 ")
+// let l = parseInt("0 * 16")
 
-const parse = (a,b) => {
-    return parse
-}
- let parseIn = parse(parseInt("100", 10))
+// const parse = (a,b) => {
+//     return parse
+// }
+//  let parseIn = parse(parseInt("100", 10))
  
- console.log("parseInF",parseIn())
+//  console.log("parseInF",parseIn())
 
- const parseG = ()=> {
-    return parseG(parseInt("8", 8))
- }
+//  const parseG = ()=> {
+//     return parseG(parseInt("8", 8))
+ 
 //   let parseGG = parseG(parseInt()/)
- console.log("parseGG",parseG())
+//  console.log("parseGG",parseG())
 
- const parseH = () => {
-    return(parseInt("15", 8))
- }
-console.log("parseH",parseH())
+//  const parseH = () => {
+//     return(parseInt("15", 8))
+//  }
+// console.log("parseH",parseH())
 
-const parseI = ()=> {
-    return parseInt("20 7 05 10")
-}
+// const parseI = ()=> {
+//     return parseInt("20 7 05 10")
+// }
 
-console.log("parseI" , parseI())
+// console.log("parseI" , parseI())
  
 ///parseFloat(string)
-let floatA = parseFloat(3.142)
-let floatB = parseFloat("3.142")
-let floatC = parseFloat(" 3.142 ")
-let floatD = parseFloat(" 3.142e-2")
-let floatE = parseFloat("0.03142E+2")
-let floatF = parseFloat("3.142need something freshing for the night")
-let floatG = parseFloat({
-    toString(){
-        return "3.142"
-    }
-})
+// let floatA = parseFloat(3.142)
+// let floatB = parseFloat("3.142")
+// let floatC = parseFloat(" 3.142 ")
+// let floatD = parseFloat(" 3.142e-2")
+// let floatE = parseFloat("0.03142E+2")
+// let floatF = parseFloat("3.142need something freshing for the night")
+// let floatG = parseFloat({
+//     toString(){
+//         return "3.142"
+//     }
+// })
 
 ///isSafeInteger///  
 // let integerA = Number.isSafeInteger(23)
@@ -416,11 +403,11 @@ let testH = isNaN(NaN)
 // console.log('using parseInt("2002@jumie.com") = ' + c)
 // console.log('using parseInt("jumie2002@.com") = ' + d)
 // console.log('using parseInt("20 7 05 10") = ' + e)
-console.log('using parseInt("100" 10) = ' + f)
-console.log('using parseInt("8" 8) = ' + g)
-console.log('using parseInt("15", 8) = ' + h)
-console.log('using parseInt("16" 16) = ' + i)
-console.log('using parseInt(" 100 ") = ' + j)
+// console.log('using parseInt("100" 10) = ' + f)
+// console.log('using parseInt("8" 8) = ' + g)
+// console.log('using parseInt("15", 8) = ' + h)
+// console.log('using parseInt("16" 16) = ' + i)
+// console.log('using parseInt(" 100 ") = ' + j)
 // console.log('using parseInt( " 0 x 16") = ' + l)
 // console.log("using parseFloat(3.142) = " + floatA)
 // console.log("using parseFloat('3.142') = " + floatB)
